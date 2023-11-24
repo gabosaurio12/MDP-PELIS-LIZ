@@ -21,17 +21,16 @@ int posicionProd(producto a[], int n, string cl){
 			return i;
 		}
 	}
+
 	return 50;
 }
 
 void modificar(producto a[]){
-	// clave de prueba
-	a[0].clave = "1234";
-	
 	string bClave;
 	cout << "Ingresa la clave del producto que quieres editar: ";
 	cin >> bClave;
 	int posicion = posicionProd(a,50,bClave);
+	
 	if(posicion == 50){
 		cout << "Clave invalida \n";
 		modificar(a);
@@ -54,13 +53,16 @@ void modificar(producto a[]){
 			getline(cin, a[posicion].distribuidora);
 			cout << "Distribuidora actualizada \n";
 			cout << a[posicion].distribuidora;
+			
 			break;
 		
 		case 2:
 			cout << "Ingresa el nuevo nombre: ";
-			cin >> a[posicion].nombre;
+			cin.ignore();
+			getline(cin, a[posicion].nombre);
 			cout << "Nombre actualizado \n";
 			cout << a[posicion].nombre;
+			
 			break;
 
 		case 3:
@@ -68,6 +70,7 @@ void modificar(producto a[]){
 			cin >> a[posicion].cantidad;
 			cout << "Cantidad actualizada \n";
 			cout << a[posicion].cantidad;
+			
 			break;
 
 		case 4:
@@ -75,6 +78,7 @@ void modificar(producto a[]){
 			cin >> a[posicion].precio;
 			cout << "Precio actualizado \n";
 			cout << a[posicion].precio;
+			
 			break;
 
 		case 5:
@@ -82,6 +86,7 @@ void modificar(producto a[]){
 			cin >> a[posicion].genero;
 			cout << "Genero actualizado \n";
 			cout << a[posicion].genero;
+			
 			break;
 
 		case 6:
@@ -89,6 +94,7 @@ void modificar(producto a[]){
 			cin >> a[posicion].formato;
 			cout << "Formato actualizado \n";
 			cout << a[posicion].formato;
+			
 			break;
 
 		case 7:
@@ -96,6 +102,7 @@ void modificar(producto a[]){
 			cin >> a[posicion].director;
 			cout << "Director actualizado \n";
 			cout << a[posicion].director;
+			
 			break;
 
 		default:
@@ -107,14 +114,6 @@ void modificar(producto a[]){
 void catalogo(producto a[], int n){
 	bool band = true;
 	int i = 0;
-	// arreglos de prueba, se pueden borrar
-	a[0].clave = "1989";
-	a[0].nombre = "Dead Poets Society";
-	a[1].clave = "1973";
-	a[1].nombre = "Star Wars";
-	a[2].clave = "1997";
-	a[2].nombre = "Harry Potter";
-	// datos = a[i].clave << " ... " << a[i].nombre << " ... ";
 	while(band && i < n){
 		if(a[i].clave == ""){
 			band = false;
@@ -130,8 +129,18 @@ void catalogo(producto a[], int n){
 int main(){
 	producto peliculas[49];
 	int n = 50;
-	int opcion;
+
+	// arreglos de prueba, se pueden borrar
+	peliculas[0].clave = "1234";
+	peliculas[0].nombre = "Dead Poets Society";
+	peliculas[1].clave = "2345";
+	peliculas[1].nombre = "Star Wars";
+	peliculas[2].clave = "3456";
+	peliculas[2].nombre = "Harry Potter";
+	
 	while (1){
+		int opcion;
+		
 		cout<<"\n\t\t\t\tInventario de Cine\n\n";
 		cout<<"\n\t\t\t\tSelecciona una opcion\t\n";
 		cout<<"\n\t\t\t1.Alta del producto\n";
@@ -154,40 +163,47 @@ int main(){
 			case 2:
 				//funcion para modificar un campo
 				modificar(peliculas);
+				
 				break;
 
 			case 3:
 				//escribir el arreglo de los productos
 				catalogo(peliculas,n);
+				
 				break;
 
 			case 4:
-				
 				int max;
 				cout << "Ingresa el numero de existencia maximo que deben tener los productos \n";
 				cin >> max;
+				
 				break;
 
 			case 5:
 				int proveedor;
 				cout << "Ingresa el proveedor que quieres buscar \n";
 				cin >> proveedor;
+				
 				break;
+
 			case 6:
 				int precio;
 				cout << "Ingresa el precio minimo que deben tener las peliculas \n";
 				cin >> precio;
+				
 				break;	
 
 			case 7:
 				return 0;	
+				
 				break;
 
 			default:
 				cout<<"La opcion elegida no es valida";
+				
 				break;	
 		}		
-		}
+	}
 
 
 	return 0;
