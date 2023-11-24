@@ -137,8 +137,10 @@ int main(){
 		cout<<"\n\t\t\t1.Alta del producto\n";
 		cout<<"\n\t\t\t2.Modificacion de un producto\n";
 		cout<<"\n\t\t\t3.Mostrar Catalogo de productos\n";
-		cout<<"\n\t\t\t4.Buscar Productos\n";
-		cout<<"\n\t\t\t\t\t5.Salir\t\t\t\t\n";
+		cout<<"\n\t\t\t4.Productos cuya existencia sea menor a N \n";
+		cout<<"\n\t\t\t5.Productos que pertenezcan a un proveedor especifico\n";
+		cout<<"\n\t\t\t6.Productos que cuesten mas de un precio N\n";
+		cout<<"\n\t\t\t\t\t7.Salir\t\t\t\t\n";
 
 		cin>>opcion;
 
@@ -160,42 +162,22 @@ int main(){
 				break;
 
 			case 4:
-				//buscar productos mediante la clave
-
-				int filtro;
-				cout << "1. Productos cuya existencia sea menor a N \t";
-				cout << "2. Productos que pertenezcan a un proveedor \n";
-				cout << "\n\t\t3. Productos que tengan un precio mayor a \n";
-				cin >> filtro;
-
-				switch (filtro){
-				case 1:
-					int max;
-					cout << "Ingresa el numero de existencia maximo que deben tener los productos \n";
-					cin >> max;
-					break;
 				
-				case 2:
-					int proveedor;
-					cout << "Ingresa el proveedor que quieres buscar \n";
-					cin >> proveedor;
-					break;
-
-				case 3:
-					int precio;
-					cout << "Ingresa el precio minimo que deben tener las peliculas \n";
-					cin >> precio;
-					break;
-
-				default:
-					cout << "La opcion elegida no es valida \n";
-
+				int max;
+				cout << "Ingresa el numero de existencia maximo que deben tener los productos \n";
+				cin >> max;
 				break;
 
-				}
-
 			case 5:
-				
+				int proveedor;
+				cout << "Ingresa el proveedor que quieres buscar \n";
+				cin >> proveedor;
+				break;
+			case 6:
+				int precio;
+				cout << "Ingresa el precio minimo que deben tener las peliculas \n";
+				cin >> precio;
+				break;	
 
 			case 7:
 				return 0;	
