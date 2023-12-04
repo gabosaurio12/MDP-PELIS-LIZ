@@ -15,6 +15,26 @@ struct producto{
 	string clave;
 };
 
+void altaproducto(producto arrPelis[], int i){
+	
+	cout<<"Introduce la distribuidora\n";
+	getline(cin, arrPelis[i].distribuidora);
+	transform(arrPelis[i].distribuidora.begin(),arrPelis[i].distribuidora.end(), arrPelis[i].distribuidora.begin(),::toupper);
+	cout<<"Introduce el nombre de la pellicula\n";
+	getline(cin, arrPelis[i].nombre);
+	cout<<"Introduce la cantidad de ejemplares\n";
+	cin>>arrPelis[i].cantidad;
+	cout<<"Introduce el precio\n";
+	cin>>arrPelis[i].precio;
+	cout<<"Introduce el genero\n";
+	getline(cin, arrPelis[i].genero);
+	cout<<"Introduce el formato(DVD, BluRay, VHS o Digital)\n";
+	getline(cin, arrPelis[i].formato);
+	cout<<"Introduce el director\n";
+	getline(cin, arrPelis[i].director);
+
+}
+
 void masPrecio(producto arrPelis[], int minprecio, int nProductos){
 	for (int i=0; i<nProductos; i++){
 		if(arrPelis[i].precio > minprecio){
@@ -83,21 +103,18 @@ int main(){
 	 	case '5':
 	 		cout<<"¿Qué distribuidora quieres buscar?\n";
 	 		getline(cin, distribuidora);		
-	 		//buscaDistribuidor(peliculas, distribuidora, nP);
+	 		buscaDistribuidor(peliculas, distribuidora, nP);
 
 	 		break;
 	 	
 	 	case '6':
 	 		cout<<"Introduce el precio a comparar\n";
 	 		cin>>precioMin;
-
-      cout<<"Introduce el precio a comparar\n";
-	    cin>>precioMin;
-
-	    while(precioMin < 0){
-		      cout<<"Introduce el precio correcto\n";
-	 	      cin>>precioMin;
-	    }
+			
+	    		while(precioMin < 0){
+		      		cout<<"Introduce el precio correcto\n";
+	 	      		cin>>precioMin;
+	    		}
       
       masPrecio(peliculas, precioMin, nP);
 
