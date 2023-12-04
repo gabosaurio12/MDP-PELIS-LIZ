@@ -18,6 +18,7 @@ struct producto{
 void altaproducto(producto arrPelis[], int i){
 	
 	cout<<"Introduce la distribuidora\n";
+	cin.ignore();
 	getline(cin, arrPelis[i].distribuidora);
 	transform(arrPelis[i].distribuidora.begin(),arrPelis[i].distribuidora.end(), arrPelis[i].distribuidora.begin(),::toupper);
 	cout<<"Introduce el nombre de la pellicula\n";
