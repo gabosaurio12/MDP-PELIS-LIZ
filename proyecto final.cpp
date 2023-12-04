@@ -28,6 +28,7 @@ void altaproducto(producto arrPelis[], int i){
 	cout<<"Introduce el precio\n";
 	cin>>arrPelis[i].precio;
 	cout<<"Introduce el genero\n";
+	cin.ignore();
 	getline(cin, arrPelis[i].genero);
 	cout<<"Introduce el formato(DVD, BluRay, VHS o Digital)\n";
 	getline(cin, arrPelis[i].formato);
