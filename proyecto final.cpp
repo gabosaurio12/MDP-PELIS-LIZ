@@ -147,6 +147,22 @@ void modificarPeli(producto arrPelis[],int n){
 	}
 }
 
+void mostrarCatalogo(producto arrPelis[], int n){
+	bool band;
+	int i;
+	band = true;
+	i = 0;
+	while(band && i < n){
+		if(arrPelis[i].clave == ""){
+			band = false;
+		}
+		else{
+			cout << arrPelis[i].clave << " ... " << arrPelis[i].nombre << " ... " << arrPelis[i].precio << " ... " << arrPelis[i].cantidad << "\n";
+		}
+		i++;
+	}
+}
+
 void masPrecio(producto arrPelis[], int minprecio, int nProductos){
 	for (int i=0; i<nProductos; i++){
 		if(arrPelis[i].precio > minprecio){
