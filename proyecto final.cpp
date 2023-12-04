@@ -238,6 +238,22 @@ void mostrarCatalogo(producto arrPelis[], int n){
 	}
 }
 
+void buscaDistribuidor(producto arrPelis[], string distribucion, int nProductos){
+	for(int i = 0; i<nProductos; i++){
+		if(arrPelis[i].distribuidora == distribucion){
+			cout<<"\n";
+			cout<<arrPelis[i].clave<<"\n";
+			cout<<arrPelis[i].distribuidora<<"\n";
+			cout<<arrPelis[i].nombre<<"\n";
+			cout<<arrPelis[i].cantidad<<"\n";
+			cout<<arrPelis[i].precio<<"\n";
+			cout<<arrPelis[i].genero<<"\n";
+			cout<<arrPelis[i].formato<<"\n";
+			cout<<arrPelis[i].director<<"\n";
+		}
+	}
+}
+
 void masPrecio(producto arrPelis[], int minprecio, int nProductos){
 	for (int i=0; i<nProductos; i++){
 		if(arrPelis[i].precio > minprecio){
