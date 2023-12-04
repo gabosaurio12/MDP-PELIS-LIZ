@@ -37,6 +37,80 @@ void altaproducto(producto arrPelis[], int i){
 
 }
 
+int longitudCadena(string palabra, int posicion){
+	int contador = 0;
+	int i = 0;
+
+	while(palabra[i] != '\0'){
+		contador++;
+		i++;
+	}
+	return contador;
+}
+
+string generarClave(producto arrPelis[], int posicion){
+	int j = 0;
+	string palabra = arrPelis[posicion].distribuidora;
+	string letrasc="";
+	string numcad="";
+	string clavecomp;
+
+	posicion = posicion + 1;
+
+	int lcad = longitudCadena(palabra, posicion);
+
+	stringstream ss;
+
+	ss << posicion;
+	ss >> numcad;
+
+	numcad = '0' + numcad;
+
+	if(posicion < 10){
+		numcad = '0' + numcad;
+	}
+
+	if(lcad < 2){
+		clavecomp = palabra + palabra + numcad;
+	}
+	else {
+		while (j < 2){
+		letrasc = letrasc + palabra[j];
+		j++;
+	}
+
+	clavecomp = letrasc + numcad;
+
+	}
+
+	return clavecomp;
+
+}
+
+int confirmarproducto(producto arrPelis[], int i){
+	string respuesta;
+
+	cout<<"¿Los datos introducidos son correctos?\n";
+	cout<<"Distribuidora: "<<arrPelis[i].distribuidora<<"\n";
+	cout<<"Nombre: "<<arrPelis[i].nombre<<"\n";
+	cout<<"Cantidad: "<<arrPelis[i].cantidad<<"\n";
+	cout<<"Precio: "<<arrPelis[i].precio<<"\n";
+	cout<<"Genero: "<<arrPelis[i].genero<<"\n";
+	cout<<"Formato: "<<arrPelis[i].formato<<"\n";
+	cout<<"Director: "<<arrPelis[i].director<<"\n";
+	cout<<"\t\t\t1:Si\t\t\t2:No\t\t\t\n";
+	cin>>respuesta;
+
+	if(respuesta == "1" || respuesta == "Si" || respuesta =="SI" || respuesta =="si"){
+		return 1;
+	}
+	else{
+		return 0;
+	}
+
+}
+
+
 void menuPrincipal(){
 	cout << "\n\t\t\t\tInventario de Cine\n\n";
 	cout << "\n\t\t\t\tSelecciona una opcion\t\n";
