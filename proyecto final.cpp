@@ -238,6 +238,90 @@ void mostrarCatalogo(producto arrPelis[], int n){
 	}
 }
 
+void menorAmayor(producto arreglo[], int cont){
+	int i;
+	i = 1;
+	while(i < cont){
+		producto aux;
+		aux = arreglo[i];
+		int j;
+		j = i - 1;
+		while(j > -1){
+			if(aux.cantidad < arreglo[j].cantidad){
+				arreglo[j+1] = arreglo[j];
+			}
+			j--;
+		}
+		arreglo[j+1] = aux;
+		i++;
+	}
+}
+
+void mayorAmenor(producto arreglo[], int cont){
+	for(int i = 1; i < cont; i++){
+		int band,j;
+		producto aux;
+		aux = arreglo[i];
+		band = 0;
+		j = i - 1;
+
+		while(not band && j > -1){
+			if(arreglo[i].cantidad < aux.cantidad){
+				arreglo[j+1] = arreglo[j];
+			}
+			else{
+				band = 1;
+			}
+		}
+		arreglo[j+1] = aux;
+	}
+	
+}
+
+
+void prodExisMenorN(producto arrPelis[], int n, int max){
+	producto arrMenores[49];
+	int i, cont;
+	char orden;
+	i = 0;
+	cont = 0;
+	while(arrPelis[i].clave != "" && i < n){
+		if(arrPelis[i].cantidad < max){
+			arrMenores[cont] = arrPelis[i];
+			cont++;
+		}
+		i++;
+	}
+	cout << "Quieres ordenarlos en orden: \n";
+	cout << "1: Ascendente \t2:Descendente \t3:Por Clave\n";
+	cin >> orden;
+
+	switch(orden){
+		case '1':
+			cout << "Ascendente \n";
+			menorAmayor(arrMenores,cont);
+			for(i = 0; i < cont; i++){
+				cout << arrMenores[i].clave << " ... " << arrMenores[i].nombre << " ... " << arrMenores[i].cantidad << "\n";
+			}
+			break;
+
+		case '2':
+			cout << "Descendente \n";
+			mayorAmenor(arrMenores,cont);
+			for(i = 0; i < cont; i++){
+				cout << arrMenores[i].clave << " ... " << arrMenores[i].nombre << " ... " << arrMenores[i].cantidad << "\n";
+			}
+			break;
+
+		default:
+			cout << "Por Clave \n";
+			for(i = 0; i < cont; i++){
+				cout << arrMenores[i].clave << " ... " << arrMenores[i].nombre << " ... " << arrMenores[i].cantidad << "\n";
+			}
+			break;
+	}
+}
+
 void buscaDistribuidor(producto arrPelis[], string distribucion, int nProductos){
 	for(int i = 0; i<nProductos; i++){
 		if(arrPelis[i].distribuidora == distribucion){
@@ -281,76 +365,78 @@ int main(){
 
 
 	while(1){
-	cout<<"\n\t\t\t\tInventario de Cine\n\n";
-	cout<<"\n\n\t\t\t\t Selecciona una opcion\t\n";
-	cout<<"\n\t\t\t1.Alta del producto\n";
-	cout<<"\n\t\t\t2.Modificar un producto\n";
-	cout<<"\n\t\t\t3.Mostrar catalogo de productos\n";
-	cout<<"\n\t\t\t4.Productos cuya existencia sea mayor a N\n";
-	cout<<"\n\t\t5. Productos que pertenecan a una distribuidora especifica\n";
-	cout<<"\n\t\t\t6. Productos que cuesten mas de un precio N\n";
-	cout<<"\n\t\t\t\t\t7. Salir\t\t\t\t\n";
-
-	cin>>opcion;
-
-	switch(opcion){
-	     case '1':
-	     	//altaproducto(peliculas, i);
-
-	     	/*if(confirmarproducto(peliculas, i)){
-	     		peliculas[i].clave = generarClave(peliculas, i);
-				i = i+1;
-				nP = nP+1;	     			
-	     	}*/
-	     	break;
-	     
-	     case '2':
-	     	//modificar
-		modificarPeli(peliculas,np);
-	     	break;
-
-	     case'3':
-	     	//mostrar catalogo
-
-	     	break;
-
-	 	case '4':
-	 		//productos mayor a N
-
-	 		break;
-
-	 	case '5':
-	 		cout<<"¿Qué distribuidora quieres buscar?\n";
-	 		getline(cin, distribuidora);		
-	 		buscaDistribuidor(peliculas, distribuidora, nP);
-
-	 		break;
-	 	
-	 	case '6':
-	 		cout<<"Introduce el precio a comparar\n";
-	 		cin>>precioMin;
-			
-	    		while(precioMin < 0){
-		      		cout<<"Introduce el precio correcto\n";
-	 	      		cin>>precioMin;
-	    		}
-      
-      masPrecio(peliculas, precioMin, nP);
-
-	 		break;
-
-	 case '7':
-	 	
-	 	return 0;
-
-	 	break;
-
-	default:
-		cout<<"La opcion elegida no es valida\n";
-
-		break;
-
-	}
+		cout<<"\n\t\t\t\tInventario de Cine\n\n";
+		cout<<"\n\n\t\t\t\t Selecciona una opcion\t\n";
+		cout<<"\n\t\t\t1.Alta del producto\n";
+		cout<<"\n\t\t\t2.Modificar un producto\n";
+		cout<<"\n\t\t\t3.Mostrar catalogo de productos\n";
+		cout<<"\n\t\t\t4.Productos cuya existencia sea mayor a N\n";
+		cout<<"\n\t\t5. Productos que pertenecan a una distribuidora especifica\n";
+		cout<<"\n\t\t\t6. Productos que cuesten mas de un precio N\n";
+		cout<<"\n\t\t\t\t\t7. Salir\t\t\t\t\n";
+	
+		cin>>opcion;
+	
+		switch(opcion){
+			case '1':
+				//altaproducto(peliculas, i);
+		
+				/*if(confirmarproducto(peliculas, i)){
+					peliculas[i].clave = generarClave(peliculas, i);
+						i = i+1;
+						nP = nP+1;	     			
+				}*/
+		     	break;
+		     
+			case '2':
+				//modificar
+				modificarPeli(peliculas,np);
+			break;
+	
+			case'3':
+		     		//mostrar catalogo
+				mostrarCatalogo(peliculas,n);
+		     		break;
+	
+			case '4':
+				//productos mayor a N
+				cout << "Ingresa la cantidad maxima que quieres que tengan los productos \n";
+				cin >> max;
+				prodExisMenorN(peliculas,n,max);
+				break;
+	
+		 	case '5':
+		 		cout<<"¿Qué distribuidora quieres buscar?\n";
+		 		getline(cin, distribuidora);		
+		 		buscaDistribuidor(peliculas, distribuidora, nP);
+	
+		 		break;
+		 	
+		 	case '6':
+		 		cout<<"Introduce el precio a comparar\n";
+		 		cin>>precioMin;
+				
+		    		while(precioMin < 0){
+			      		cout<<"Introduce el precio correcto\n";
+		 	      		cin>>precioMin;
+		    		}
+	      
+	      			masPrecio(peliculas, precioMin, nP);
+	
+		 		break;
+	
+			 case '7':
+			 	
+			 	return 0;
+		
+			 	break;
+	
+			default:
+				cout<<"La opcion elegida no es valida\n";
+		
+				break;
+	
+		}
 
 	}
 
