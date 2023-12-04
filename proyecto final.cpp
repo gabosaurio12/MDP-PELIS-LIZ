@@ -379,13 +379,13 @@ int main(){
 	
 		switch(opcion){
 			case '1':
-				//altaproducto(peliculas, i);
+				altaproducto(peliculas, i);
 		
-				/*if(confirmarproducto(peliculas, i)){
+				if(confirmarproducto(peliculas, i)){
 					peliculas[i].clave = generarClave(peliculas, i);
 						i = i+1;
 						nP = nP+1;	     			
-				}*/
+				}
 		     	break;
 		     
 			case '2':
