@@ -38,7 +38,7 @@ void altaproducto(producto arrPelis[], int i){
 	getline(cin, arrPelis[i].genero);
 	transform(arrPelis[i].genero.begin(),arrPelis[i].genero.end(), arrPelis[i].genero.begin(),::toupper);
 	
-	cout<<"Introduce el formato(DVD, BlueRay, VHS o Digital)\n";
+	cout<<"Introduce el formato(DVD, BluRay, VHS o Digital)\n";
 	getline(cin, arrPelis[i].formato);
 	transform(arrPelis[i].formato.begin(),arrPelis[i].formato.end(), arrPelis[i].formato.begin(),::toupper);
 	
@@ -120,20 +120,6 @@ int confirmarproducto(producto arrPelis[], int i){
 
 }
 
-
-void menuPrincipal(){
-	cout << "\n\t\t\t\tInventario de Cine\n\n";
-	cout << "\n\t\t\t\tSelecciona una opcion\t\n";
-	cout << "\n\t\t\t1.Alta del producto\n";
-	cout << "\n\t\t\t2.Modificacion de un producto\n";
-	cout << "\n\t\t\t3.Mostrar Catalogo de productos\n";
-	cout << "\n\t\t\t4.Productos cuya existencia sea menor a N\n";
-	cout << "\n\t\t\t5.Productos que pertenezcan a una distribuidora especifica\n";
-	cout << "\n\t\t\t6.Productos que cuesten mas de un precio N\n";
-	cout << "\n\t\t\t\t\t7.Salir\t\t\t\t\n\n";
-	cout << "Ingresa la opcion: ";
-}
-
 int posicionPeli(producto arrPelis[], string clave, int n){
 	for (int i = 0; i < n; i++){
 		if(arrPelis[i].clave == clave){
@@ -161,7 +147,7 @@ void modificarPeli(producto arrPelis[],int n){
 
 		cout << "Elige la opcion que deseas modificar \n";
 
-		cout << "1. Productora \n";
+		cout << "1. Distribuidora \n";
 		cout << "2. Nombre \n";
 		cout << "3. Cantidad \n";
 		cout << "4. Precio \n";
@@ -242,7 +228,6 @@ void mostrarCatalogo(producto arrPelis[], int n){
 	int i;
 	band = true;
 	i = 0;
-	cout << "CLAVE \t NOMBRE \t CANTIDAD \t PRECIO \t GENERO \t FORMATO \t DIRECTOR \n";
 	while(band && i < n){
 		if(arrPelis[i].clave == ""){
 			band = false;
@@ -325,31 +310,40 @@ int main(){
 	int precioMin;
 	int n = 50;
 	int max;
+	int prod = 0;
 
 	producto peliculas[50];
 
 
 	while(1){
-		cout<<"\n\t\t\t\tInventario de Cine\n\n";
-		cout<<"\n\n\t\t\t\t Selecciona una opcion\t\n";
+		cout<<"\n\t\t\t\tInventario de Cine\n";
+		cout<<"\n\n\t\t\t\tSelecciona una opcion\t\n";
 		cout<<"\n\t\t\t1.Alta del producto\n";
 		cout<<"\n\t\t\t2.Modificar un producto\n";
 		cout<<"\n\t\t\t3.Mostrar catalogo de productos\n";
 		cout<<"\n\t\t\t4.Productos cuya existencia sea menor a N\n";
-		cout<<"\n\t\t5. Productos que pertenecan a una distribuidora especifica\n";
+		cout<<"\n\t\t\t5. Productos que pertenecan a una distribuidora especifica\n";
 		cout<<"\n\t\t\t6. Productos que cuesten mas de un precio N\n";
 		cout<<"\n\t\t\t\t\t7. Salir\t\t\t\t\n";
 	
+		cout << "Ingresa la opcion: ";
 		cin>>opcion;
 	
 		switch(opcion){
 			case '1':
-				altaproducto(peliculas, i);
-		
-				if(confirmarproducto(peliculas, i)){
-					peliculas[i].clave = generarClave(peliculas, i);
+				if(prod < 50){
+					altaproducto(peliculas, i);
+			
+					if(confirmarproducto(peliculas, i)){
+						peliculas[i].clave = generarClave(peliculas, i);
 						i = i+1;
 						nP = nP+1;	     			
+					}
+
+					prod++;
+				}
+				else{
+					cout << "Ya no se pueden dar mas productos de alta \n";
 				}
 		     	break;
 		     
