@@ -140,9 +140,21 @@ void modificarPeli(producto arrPelis[],int n){
 	}
 	else{
 		char opcion;
-		string nuevaDistribuidora, nuevoNombre, nuevoGenero, nuevaCantidad, nuevoPrecio, nuevoFormato, nuevoDirector;
+		string nuevaDistribuidora, nuevoNombre, nuevoGenero, nuevoFormato, nuevoDirector;
+		int nuevaCantidad;
+		float nuevoPrecio;
 
-		cout << "Elige la opcion que deseas modificar \n";
+		cout << "\n";
+		cout << "CLAVE " << arrPelis[posicion].clave << "\n";
+		cout << "DISTRIBUIDORA " << arrPelis[posicion].distribuidora << "\n";
+		cout << "NOMBRE " << arrPelis[posicion].nombre << "\n";
+		cout << "CANTIDAD " << arrPelis[posicion].cantidad << "\n";
+		cout << "PRECIO " << arrPelis[posicion].precio << "\n";
+		cout << "GENERO " << arrPelis[posicion].genero << "\n";
+		cout << "FORMATO " << arrPelis[posicion].formato << "\n";
+		cout << "DIRECTOR " << arrPelis[posicion].director << "\n";
+
+		cout << "\nElige la opcion que deseas modificar \n";
 
 		cout << "1. Distribuidora \n";
 		cout << "2. Nombre \n";
@@ -157,6 +169,7 @@ void modificarPeli(producto arrPelis[],int n){
 		switch(opcion){
 			case '1':
 				cout << "Ingresa la nueva Distribuidora: ";
+				cin.ignore();
 				getline(cin, nuevaDistribuidora);
 				transform(nuevaDistribuidora.begin(), nuevaDistribuidora.end(), nuevaDistribuidora.begin(), ::toupper);
 				arrPelis[posicion].distribuidora = nuevaDistribuidora;
@@ -165,6 +178,7 @@ void modificarPeli(producto arrPelis[],int n){
 
 			case '2':
 				cout << "Ingresa el nuevo Nombre: ";
+				cin.ignore();
 				getline(cin, nuevoNombre);
 				transform(nuevoNombre.begin(), nuevoNombre.end(), nuevoNombre.begin(), ::toupper);
 				arrPelis[posicion].nombre = nuevoNombre;
@@ -173,20 +187,21 @@ void modificarPeli(producto arrPelis[],int n){
 
 			case '3':
 				cout << "Ingresa la nueva Cantidad en existencia: ";
-				getline(cin, nuevaCantidad);
+				cin >> nuevaCantidad;
 				arrPelis[posicion].cantidad = nuevaCantidad;
 				cout << "La Cantidad ha sido actualizada \n";
 				break;
 
 			case '4':
 				cout << "Ingresa el Precio nuevo: ";
-				getline(cin, nuevoPrecio);
+				cin>> nuevoPrecio;
 				arrPelis[posicion].precio = nuevoPrecio;
 				cout << "El Precio ha sido actualizado \n";
 				break;
 
 			case '5':
 				cout << "Ingresa el Genero nuevo: ";
+				cin.ignore();
 				getline(cin, nuevoGenero);
 				transform(nuevoGenero.begin(), nuevoGenero.end(), nuevoGenero.begin(), ::toupper);
 				arrPelis[posicion].genero = nuevoGenero;
@@ -195,6 +210,7 @@ void modificarPeli(producto arrPelis[],int n){
 
 			case '6':
 				cout << "Ingresa el nuevo Formato: ";
+				cin.ignore();
 				getline(cin, nuevoFormato);
 				transform(nuevoFormato.begin(), nuevoFormato.end(), nuevoFormato.begin(), ::toupper);
 				arrPelis[posicion].formato = nuevoFormato;
@@ -203,6 +219,7 @@ void modificarPeli(producto arrPelis[],int n){
 
 			case '7':
 				cout << "Ingresa el Director nuevo: ";
+				cin.ignore();
 				getline(cin, nuevoDirector);
 				transform(nuevoDirector.begin(), nuevoDirector.end(), nuevoDirector.begin(), ::toupper);
 				arrPelis[posicion].director = nuevoDirector;
@@ -250,13 +267,11 @@ void prodExisMenorN(producto arrPelis[], int n, int max){
 	for(int i = 0; i < cont; i++){
 		cout << "\n";
 		cout << "CLAVE " << arrMenores[i].clave << "\n";
-		cout << "DISTRIBUIDORA " << arrPelis[i].distribuidora << "\n";
 		cout << "NOMBRE " << arrPelis[i].nombre << "\n";
 		cout << "CANTIDAD " << arrPelis[i].cantidad << "\n";
 		cout << "PRECIO " << arrPelis[i].precio << "\n";
 		cout << "GENERO " << arrPelis[i].genero << "\n";
 		cout << "FORMATO " << arrPelis[i].formato << "\n";
-		cout << "DIRECTOR " << arrPelis[i].director << "\n";
 	}
 }
 
@@ -269,9 +284,7 @@ void buscaDistribuidor(producto arrPelis[], string distribucion, int nProductos)
 			cout<< "NOMBRE " << arrPelis[i].nombre<<"\n";
 			cout<< "CANTIDAD " << arrPelis[i].cantidad<<"\n";
 			cout<< "PRECIO " << arrPelis[i].precio<<"\n";
-			cout<< "GENERO " << arrPelis[i].genero<<"\n";
 			cout<<"FORMATO " << arrPelis[i].formato<<"\n";
-			cout<< "DIRECTOR " << arrPelis[i].director<<"\n";
 		}
 	}
 }
@@ -281,27 +294,25 @@ void masPrecio(producto arrPelis[], int minprecio, int nProductos){
 		if(arrPelis[i].precio > minprecio){
 			cout<<"\n";
 			cout<< "CLAVE " << arrPelis[i].clave<<"\n";
-			cout<< "DISTRIBUIDORA " <<arrPelis[i].distribuidora<<"\n";
 			cout<< "NOMBRE " << arrPelis[i].nombre<<"\n";
 			cout<< "CANTIDAD " << arrPelis[i].cantidad<<"\n";
 			cout<< "PRECIO " << arrPelis[i].precio<<"\n";
-			cout<< "GENERO " << arrPelis[i].genero<<"\n";
 			cout<< "FORMATO " << arrPelis[i].formato<<"\n";
-			cout<< "DIRECTOR " << arrPelis[i].director<<"\n";
 		}
 	}
 }
 
 int main(){
+	producto peliculas[50];
+
 	char opcion;
 	int i = 0;
-	string distribuidora;
 	int nP = 0;
+	int prod = 0;
 	int precioMin;
 	int max;
-	int prod = 0;
+	string distribuidora;
 
-	producto peliculas[50];
 
 
 	while(1){
