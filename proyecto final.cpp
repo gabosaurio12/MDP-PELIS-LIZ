@@ -99,7 +99,7 @@ string generarClave(producto arrPelis[], int posicion){
 int confirmarproducto(producto arrPelis[], int i){
 	string respuesta;
 
-	cout<<"¿Los datos introducidos son correctos?\n";
+	cout<<"\n¿Los datos introducidos son correctos?\n";
 	cout<<"Distribuidora: "<<arrPelis[i].distribuidora<<"\n";
 	cout<<"Nombre: "<<arrPelis[i].nombre<<"\n";
 	cout<<"Cantidad: "<<arrPelis[i].cantidad<<"\n";
@@ -140,9 +140,7 @@ void modificarPeli(producto arrPelis[],int n){
 	}
 	else{
 		char opcion;
-		int nuevaCantidad;
-		float nuevoPrecio;
-		string nuevaDistribuidora, nuevoNombre, nuevoGenero, nuevoFormato, nuevoDirector;
+		string nuevaDistribuidora, nuevoNombre, nuevoGenero, nuevaCantidad, nuevoPrecio, nuevoFormato, nuevoDirector;
 
 		cout << "Elige la opcion que deseas modificar \n";
 
@@ -159,7 +157,7 @@ void modificarPeli(producto arrPelis[],int n){
 		switch(opcion){
 			case '1':
 				cout << "Ingresa la nueva Distribuidora: ";
-				cin >> nuevaDistribuidora;
+				getline(cin, nuevaDistribuidora);
 				transform(nuevaDistribuidora.begin(), nuevaDistribuidora.end(), nuevaDistribuidora.begin(), ::toupper);
 				arrPelis[posicion].distribuidora = nuevaDistribuidora;
 				cout << "La Distribuidora ha sido actualizada \n";
@@ -167,7 +165,7 @@ void modificarPeli(producto arrPelis[],int n){
 
 			case '2':
 				cout << "Ingresa el nuevo Nombre: ";
-				cin >> nuevoNombre;
+				getline(cin, nuevoNombre);
 				transform(nuevoNombre.begin(), nuevoNombre.end(), nuevoNombre.begin(), ::toupper);
 				arrPelis[posicion].nombre = nuevoNombre;
 				cout << "El nombre ha sido actualizado \n";
@@ -175,21 +173,21 @@ void modificarPeli(producto arrPelis[],int n){
 
 			case '3':
 				cout << "Ingresa la nueva Cantidad en existencia: ";
-				cin >> nuevaCantidad;
+				getline(cin, nuevaCantidad);
 				arrPelis[posicion].cantidad = nuevaCantidad;
 				cout << "La Cantidad ha sido actualizada \n";
 				break;
 
 			case '4':
 				cout << "Ingresa el Precio nuevo: ";
-				cin >> nuevoPrecio;
+				getline(cin, nuevoPrecio);
 				arrPelis[posicion].precio = nuevoPrecio;
 				cout << "El Precio ha sido actualizado \n";
 				break;
 
 			case '5':
 				cout << "Ingresa el Genero nuevo: ";
-				cin >> nuevoGenero;
+				getline(cin, nuevoGenero);
 				transform(nuevoGenero.begin(), nuevoGenero.end(), nuevoGenero.begin(), ::toupper);
 				arrPelis[posicion].genero = nuevoGenero;
 				cout << "El Genero ha sido actualizado \n";
@@ -197,7 +195,7 @@ void modificarPeli(producto arrPelis[],int n){
 
 			case '6':
 				cout << "Ingresa el nuevo Formato: ";
-				cin >> nuevoFormato;
+				getline(cin, nuevoFormato);
 				transform(nuevoFormato.begin(), nuevoFormato.end(), nuevoFormato.begin(), ::toupper);
 				arrPelis[posicion].formato = nuevoFormato;
 				cout << "El Formato ha sido actualizado \n";
@@ -205,7 +203,7 @@ void modificarPeli(producto arrPelis[],int n){
 
 			case '7':
 				cout << "Ingresa el Director nuevo: ";
-				cin >> nuevoDirector;
+				getline(cin, nuevoDirector);
 				transform(nuevoDirector.begin(), nuevoDirector.end(), nuevoDirector.begin(), ::toupper);
 				arrPelis[posicion].director = nuevoDirector;
 				cout << "El Director ha sido actualizado \n";
@@ -223,36 +221,25 @@ void modificarPeli(producto arrPelis[],int n){
 }
 
 void mostrarCatalogo(producto arrPelis[], int n){
-	bool band;
-	int i;
-	band = true;
-	i = 0;
-	while(band && i < n){
-		if(arrPelis[i].clave == ""){
-			band = false;
-		}
-		else{
-			cout << "\n";
-			cout << "CLAVE " << arrPelis[i].clave << "\n";
-			cout << "DISTRIBUIDORA " << arrPelis[i].distribuidora << "\n";
-			cout << "NOMBRE " << arrPelis[i].nombre << "\n";
-			cout << "CANTIDAD " << arrPelis[i].cantidad << "\n";
-			cout << "PRECIO " << arrPelis[i].precio << "\n";
-			cout << "GENERO " << arrPelis[i].genero << "\n";
-			cout << "FORMATO " << arrPelis[i].formato << "\n";
-			cout << "DIRECTOR " << arrPelis[i].director << "\n";
-		}
-		i++;
+	for(int i = 0; i < n; i++){
+		cout << "\n";
+		cout << "CLAVE " << arrPelis[i].clave << "\n";
+		cout << "DISTRIBUIDORA " << arrPelis[i].distribuidora << "\n";
+		cout << "NOMBRE " << arrPelis[i].nombre << "\n";
+		cout << "CANTIDAD " << arrPelis[i].cantidad << "\n";
+		cout << "PRECIO " << arrPelis[i].precio << "\n";
+		cout << "GENERO " << arrPelis[i].genero << "\n";
+		cout << "FORMATO " << arrPelis[i].formato << "\n";
+		cout << "DIRECTOR " << arrPelis[i].director << "\n";
 	}
 }
 
 void prodExisMenorN(producto arrPelis[], int n, int max){
 	producto arrMenores[49];
-	int i, cont;
+	int cont;
 	char orden;
-	i = 0;
 	cont = 0;
-	while(arrPelis[i].clave != "" && i < n){
+	for(int i = 0; i < n; i++){
 		if(arrPelis[i].cantidad < max){
 			arrMenores[cont] = arrPelis[i];
 			cont++;
@@ -260,11 +247,16 @@ void prodExisMenorN(producto arrPelis[], int n, int max){
 		i++;
 	}
 
-	for(i = 0; i < cont; i++){
+	for(int i = 0; i < cont; i++){
 		cout << "\n";
 		cout << "CLAVE " << arrMenores[i].clave << "\n";
-		cout << "NOMBRE " << arrMenores[i].nombre << "\n";
-		cout << "CANTIDAD " << arrMenores[i].cantidad << "\n";
+		cout << "DISTRIBUIDORA " << arrPelis[i].distribuidora << "\n";
+		cout << "NOMBRE " << arrPelis[i].nombre << "\n";
+		cout << "CANTIDAD " << arrPelis[i].cantidad << "\n";
+		cout << "PRECIO " << arrPelis[i].precio << "\n";
+		cout << "GENERO " << arrPelis[i].genero << "\n";
+		cout << "FORMATO " << arrPelis[i].formato << "\n";
+		cout << "DIRECTOR " << arrPelis[i].director << "\n";
 	}
 }
 
@@ -306,7 +298,6 @@ int main(){
 	string distribuidora;
 	int nP = 0;
 	int precioMin;
-	int n = 50;
 	int max;
 	int prod = 0;
 
@@ -325,6 +316,7 @@ int main(){
 		cout<<"\n\t\t\t\t\t7. Salir\t\t\t\t\n";
 	
 		cout << "Ingresa la opcion: ";
+		//cin.ignore();  solo si se compila con gcc
 		cin>>opcion;
 	
 		switch(opcion){
@@ -352,7 +344,7 @@ int main(){
 	
 			case'3':
 		     		//mostrar catalogo
-				mostrarCatalogo(peliculas,n);
+				mostrarCatalogo(peliculas,nP);
 		     		break;
 	
 			case '4':
@@ -364,7 +356,7 @@ int main(){
 			      		cout<<"Introduce la cantidad correcta\n";
 		 	      		cin>>max;
 		    		}	
-				prodExisMenorN(peliculas,n,max);
+				prodExisMenorN(peliculas,nP,max);
 				break;
 	
 		 	case '5':
