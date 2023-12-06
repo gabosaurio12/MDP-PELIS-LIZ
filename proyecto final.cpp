@@ -325,7 +325,6 @@ int main(){
 		cout<<"\n\t\t\t\t\t7. Salir\t\t\t\t\n";
 	
 		cout << "Ingresa la opcion: ";
-		cin.ignore();
 		cin>>opcion;
 	
 		switch(opcion){
