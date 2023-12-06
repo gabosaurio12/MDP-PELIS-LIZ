@@ -94,7 +94,6 @@ string generarClave(producto arrPelis[], int posicion){
 	}
 
 	return clavecomp;
-
 }
 
 int confirmarproducto(producto arrPelis[], int i){
@@ -117,7 +116,6 @@ int confirmarproducto(producto arrPelis[], int i){
 	else{
 		return 0;
 	}
-
 }
 
 int posicionPeli(producto arrPelis[], string clave, int n){
@@ -134,6 +132,7 @@ void modificarPeli(producto arrPelis[],int n){
 	int posicion;
 	cout << "Ingresa la clave del producto: ";
 	cin >> clave;
+	transform(clave.begin(),clave.end(),clave.begin(), ::toupper);
 	posicion = posicionPeli(arrPelis,clave,n);
 	
 	if(posicion == 50){
@@ -267,7 +266,6 @@ void prodExisMenorN(producto arrPelis[], int n, int max){
 		cout << "NOMBRE " << arrMenores[i].nombre << "\n";
 		cout << "CANTIDAD " << arrMenores[i].cantidad << "\n";
 	}
-
 }
 
 void buscaDistribuidor(producto arrPelis[], string distribucion, int nProductos){
@@ -327,6 +325,7 @@ int main(){
 		cout<<"\n\t\t\t\t\t7. Salir\t\t\t\t\n";
 	
 		cout << "Ingresa la opcion: ";
+		cin.ignore();
 		cin>>opcion;
 	
 		switch(opcion){
