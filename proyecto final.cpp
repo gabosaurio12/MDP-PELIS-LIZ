@@ -308,12 +308,9 @@ int main(){
 	char opcion;
 	int i = 0;
 	int nP = 0;
-	int prod = 0;
 	int precioMin;
 	int max;
 	string distribuidora;
-
-
 
 	while(1){
 		cout<<"\n\t\t\t\tInventario de Cine\n";
@@ -332,7 +329,7 @@ int main(){
 	
 		switch(opcion){
 			case '1':
-				if(prod < 50){
+				if(nP < 50){
 					altaproducto(peliculas, i);
 			
 					if(confirmarproducto(peliculas, i)){
@@ -340,8 +337,6 @@ int main(){
 						i = i+1;
 						nP = nP+1;	     			
 					}
-
-					prod++;
 				}
 				else{
 					cout << "Ya no se pueden dar mas productos de alta \n";
