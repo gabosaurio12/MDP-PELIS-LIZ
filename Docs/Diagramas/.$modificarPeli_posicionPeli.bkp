@@ -1,0 +1,280 @@
+<mxfile host="Electron" modified="2023-12-02T21:22:41.425Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="fFS3wHRv_l-6RlPtindA" version="22.1.2" type="device">
+  <diagram name="Página-1" id="xfwQz3lGUrBn6pJy3y7a">
+    <mxGraphModel dx="4780" dy="2793" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3200" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-1" target="WYnrWLiPwaBzmn_K7X9e-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-1" value="FUNCION posicionPeli (&amp;lt;E/S&amp;gt; producto: arrPelis[ ], &amp;lt;E&amp;gt; clave, &amp;lt;E&amp;gt; n) -&amp;gt; ENTERO" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="230" y="40" width="480" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-2" target="WYnrWLiPwaBzmn_K7X9e-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-2" value="i &amp;lt;- 0" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="434" y="150" width="72" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-4" target="WYnrWLiPwaBzmn_K7X9e-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.961;exitY=0.494;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="390" as="targetPoint" />
+            <mxPoint x="556.9279999999999" y="252.64" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="557" y="260" />
+              <mxPoint x="656" y="260" />
+              <mxPoint x="656" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-19" value="NO" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="WYnrWLiPwaBzmn_K7X9e-14" vertex="1" connectable="0">
+          <mxGeometry x="-0.6924" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-4" value="arrPelis[i].clave = clave" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="374" y="220" width="192" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-6" target="WYnrWLiPwaBzmn_K7X9e-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-6" value="REGRESA i" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="424" y="350" width="92" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-8" target="WYnrWLiPwaBzmn_K7X9e-15" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-8" value="i &amp;lt;- i + 1" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="434" y="420" width="72" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-15" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="190" as="targetPoint" />
+            <mxPoint x="434" y="490" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="306" y="500" />
+              <mxPoint x="306" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-20" value="SI" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="WYnrWLiPwaBzmn_K7X9e-17" vertex="1" connectable="0">
+          <mxGeometry x="-0.86" y="-1" relative="1" as="geometry">
+            <mxPoint y="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-15" target="WYnrWLiPwaBzmn_K7X9e-21" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-23" value="NO" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="WYnrWLiPwaBzmn_K7X9e-22" vertex="1" connectable="0">
+          <mxGeometry x="-0.1143" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-15" value="i &amp;lt; n" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="430" y="480" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-21" target="WYnrWLiPwaBzmn_K7X9e-26" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-21" value="REGRESA 50" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="424" y="580" width="92" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-26" value="FIN_posicionProd" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="410" y="650" width="120" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-28" target="WYnrWLiPwaBzmn_K7X9e-30" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-28" value="PROCEDIMIENTO modificarPeli (&amp;lt;E/S&amp;gt; arrPelis[ ], &amp;lt;E&amp;gt; clave, &amp;lt;E&amp;gt; n)" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1313" y="40" width="456" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-89" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-30" target="WYnrWLiPwaBzmn_K7X9e-88" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-30" value="posicion &amp;lt;- posicionPeli (arrPelis[ ], clave, n)" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1412" y="150" width="258" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-32" target="WYnrWLiPwaBzmn_K7X9e-34" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-32" value="Escribir (&quot;Elige la opcion que deseas modificar&quot;)" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1401.5" y="350" width="279" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-34" target="WYnrWLiPwaBzmn_K7X9e-36" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-34" value="Escribir (&quot;1. Producto&quot;);&lt;br&gt;Escribir (&quot;2. Nombre&quot;);&lt;br&gt;Escribir (&quot;3. Cantidad&quot;);&lt;br&gt;Escribir (&quot;4. Precio&quot;);&lt;br&gt;Escribir (&quot;5. Genero&quot;);&lt;br&gt;Escribir (&quot;6. Formato&quot;);&lt;br&gt;Escribir (&quot;7. Director&quot;);&lt;br&gt;Escribir (&quot;8. Regresar&quot;);&lt;br&gt;" style="whiteSpace=wrap;html=1;align=left;spacingLeft=5;" parent="1" vertex="1">
+          <mxGeometry x="1452" y="450" width="179" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-36" target="WYnrWLiPwaBzmn_K7X9e-38" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-36" value="Leer (opcion)" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1492.5" y="650" width="98" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-38" target="WYnrWLiPwaBzmn_K7X9e-40" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="06bWtxcavH1dx91QH8GB-3" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="WYnrWLiPwaBzmn_K7X9e-41">
+          <mxGeometry x="0.8758" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-38" target="WYnrWLiPwaBzmn_K7X9e-47" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1420" y="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="06bWtxcavH1dx91QH8GB-4" value="2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="WYnrWLiPwaBzmn_K7X9e-46">
+          <mxGeometry x="0.8361" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-38" target="WYnrWLiPwaBzmn_K7X9e-52" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1380.004482758621" y="980" as="targetPoint" />
+            <mxPoint x="1611.47" y="770" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="1304" y="770" />
+              <mxPoint x="1304" y="800" />
+              <mxPoint x="1003" y="800" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="06bWtxcavH1dx91QH8GB-5" value="3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="WYnrWLiPwaBzmn_K7X9e-50">
+          <mxGeometry x="0.7611" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-38" target="WYnrWLiPwaBzmn_K7X9e-61" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1460" y="850" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1522" y="800" />
+              <mxPoint x="1378" y="800" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="06bWtxcavH1dx91QH8GB-6" value="4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="WYnrWLiPwaBzmn_K7X9e-60">
+          <mxGeometry x="0.4205" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-64" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-38" target="WYnrWLiPwaBzmn_K7X9e-63" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="06bWtxcavH1dx91QH8GB-10" value="8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="WYnrWLiPwaBzmn_K7X9e-64">
+          <mxGeometry x="0.8552" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-38" target="WYnrWLiPwaBzmn_K7X9e-66" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2050" y="920" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="06bWtxcavH1dx91QH8GB-9" value="7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="WYnrWLiPwaBzmn_K7X9e-65">
+          <mxGeometry x="0.842" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-71" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-38" target="WYnrWLiPwaBzmn_K7X9e-70" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1562" y="800" />
+              <mxPoint x="1720" y="800" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="06bWtxcavH1dx91QH8GB-7" value="5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="WYnrWLiPwaBzmn_K7X9e-71">
+          <mxGeometry x="0.4573" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-38" target="WYnrWLiPwaBzmn_K7X9e-74" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2000" y="860" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="06bWtxcavH1dx91QH8GB-8" value="6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="WYnrWLiPwaBzmn_K7X9e-73">
+          <mxGeometry x="0.7622" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-38" target="WYnrWLiPwaBzmn_K7X9e-78" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3040" y="880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-77" value="OTRO" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="WYnrWLiPwaBzmn_K7X9e-76" vertex="1" connectable="0">
+          <mxGeometry x="0.9269" y="2" relative="1" as="geometry">
+            <mxPoint x="-2" y="-41" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-38" target="WYnrWLiPwaBzmn_K7X9e-86" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1541.5" y="990.0000000000002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-38" value="opcion" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1501.5" y="740" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-40" value="Escribir (&quot;Ingresa la nueva Productora&quot;);&lt;br style=&quot;font-size: 12px;&quot;&gt;Leer (nuevaProductora);&lt;br style=&quot;font-size: 12px;&quot;&gt;arrPelis[posicion].productora &amp;lt;- nuevaProductora;&lt;br style=&quot;font-size: 12px;&quot;&gt;Escribir (&quot;La Productora ha sido actualizada&quot;);" style="whiteSpace=wrap;html=1;align=left;textDirection=ltr;fontSize=12;spacingLeft=5;" parent="1" vertex="1">
+          <mxGeometry x="210" y="907" width="290" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-47" value="Escribir (&quot;Ingresa el nuevo Nombre&quot;);&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;&quot;&gt;Leer (nuevoNombre);&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;&quot;&gt;arrPelis[posicion].nombre &amp;lt;- nuevoNombre;&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;&quot;&gt;Escribir (&quot;El Nombre ha sido actualizado&quot;);&lt;/span&gt;" style="whiteSpace=wrap;html=1;align=left;spacingLeft=5;" parent="1" vertex="1">
+          <mxGeometry x="523" y="907" width="310" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-52" value="Escribir (&quot;Ingresa la nueva Cantidad&quot;);&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;Leer (nuevaCantidad);&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;arrPelis[posicion].cantidad &amp;lt;- nuevaCantidad;&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Escribir (&quot;La Cantidad ha sido actualizada&quot;);&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;spacingLeft=5;" parent="1" vertex="1">
+          <mxGeometry x="870" y="906.67" width="320" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-61" value="Escribir (&quot;Ingresa el nueva Precio&quot;);&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;Leer (nuevoPrecio);&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;arrPelis[posicion].precio &amp;lt;- nuevoPrecio;&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;Escribir (&quot;El Precio ha sido actualizado&quot;);&lt;/span&gt;" style="whiteSpace=wrap;html=1;align=left;spacingLeft=5;" parent="1" vertex="1">
+          <mxGeometry x="1241" y="906.89" width="275" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-63" value="REGRESA AL MENU PRINCIPAL" style="whiteSpace=wrap;html=1;align=left;spacingLeft=5;" parent="1" vertex="1">
+          <mxGeometry x="2680" y="926.34" width="200" height="40.66" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-66" value="&lt;span style=&quot;font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Escribir (&quot;Ingresa el nuevo Director&quot;);&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Leer (nuevoDirector);&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;arrPelis[posicion].director &amp;lt;- nuevoDirector;&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Escribir (&quot;El Director ha sido actualizado&quot;)&lt;/span&gt;" style="whiteSpace=wrap;html=1;align=left;spacingLeft=5;labelBackgroundColor=none;fontColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="2310" y="906.67" width="300" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-70" value="&lt;font color=&quot;#fafafa&quot;&gt;&lt;span style=&quot;font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Escribir (&quot;Ingresa el nueva Genero&quot;);&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Leer (nuevoGenero);&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;arrPelis[posicion].genero &amp;lt;- nuevoGenero;&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Escribir (&quot;El Genero ha sido actualizado&quot;);&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;spacingLeft=5;align=left;fillStyle=auto;fillColor=#18141D;labelBackgroundColor=none;fontColor=#1F1F1F;" parent="1" vertex="1">
+          <mxGeometry x="1571" y="906.78" width="297" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-74" value="&lt;span style=&quot;font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Escribir (&quot;Ingresa el nuevo Formato&quot;);&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Leer (nuevoFormato);&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;arrPelis[posicion].formato &amp;lt;- nuevoFormato;&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Escribir (&quot;El Formato ha sido actualizado&quot;)&lt;/span&gt;" style="whiteSpace=wrap;html=1;align=left;spacingLeft=5;labelBackgroundColor=none;fontColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="1930" y="906.67" width="321" height="80.11" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-78" value="Escribir (&quot;Opcion invalida&quot;);&lt;br&gt;modificarPeli(arrPelis[ ],clave,n);" style="whiteSpace=wrap;html=1;align=left;spacingLeft=5;" parent="1" vertex="1">
+          <mxGeometry x="2940" y="927" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-86" value="FIN_modificarPeli" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1480" y="1127" width="122" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-91" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-88" target="WYnrWLiPwaBzmn_K7X9e-90" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-93" value="SI" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="WYnrWLiPwaBzmn_K7X9e-91" vertex="1" connectable="0">
+          <mxGeometry x="-0.0574" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-94" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="WYnrWLiPwaBzmn_K7X9e-88" target="WYnrWLiPwaBzmn_K7X9e-32" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-95" value="NO" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="WYnrWLiPwaBzmn_K7X9e-94" vertex="1" connectable="0">
+          <mxGeometry x="-0.1873" relative="1" as="geometry">
+            <mxPoint x="1" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-88" value="posicion = 50" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1482" y="220" width="118" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="WYnrWLiPwaBzmn_K7X9e-90" value="Escribir (&quot;Clave invalida, vuelve a intentarlo&quot;);&lt;br&gt;modificarPeli(arrPelis[ ],clave,n);" style="whiteSpace=wrap;html=1;align=left;spacingLeft=5;" parent="1" vertex="1">
+          <mxGeometry x="1680.5" y="220" width="282" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
